@@ -1,0 +1,52 @@
+<!-- website/login/signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | YourApp</title>
+  <link rel="stylesheet" href="login.css" />
+  <script src="signup.js"></script>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="logo">YourApp</div>
+
+      <form id="signupForm" novalidate>
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Your full name" />
+          <span class="error-message" id="nameError"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter your email" />
+          <span class="error-message" id="emailError"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Create a password" />
+          <span class="error-message" id="passwordError"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" placeholder="Repeat your password" />
+          <span class="error-message" id="confirmError"></span>
+        </div>
+
+        <button type="submit" class="login-btn">Sign Up</button>
+
+        <div class="links">
+          <p>Already have an account? <a href="login.html">Log In</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+/* ========== GLOBAL NAVBAR ========== */
+#mainNavbar {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#mainNavbar .nav-link {
+  color: black !important;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#logo {
+  color: #800080 !important;  /* Purple */
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+#loginBtn {
+  background-color: #001f3f;  /* Navy Blue */
+  color: white !important;
+  font-weight: bold;
+  padding: 6px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+
+/* ========== SCROLL EFFECT ========== */
+#mainNavbar.nav-scrolled {
+  background-color: #000 !important;
+}
+
+#mainNavbar.nav-scrolled .nav-link {
+  color: white !important;
+}
+
+#mainNavbar.nav-scrolled #logo {
+  color: white !important;
+}
+
+#mainNavbar.nav-scrolled .navbar-toggler-icon {
+  filter: invert(100%);
+}
+
+
+/* ========== RESPONSIVE ========== */
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+/* ========== TOGGLER ICON CUSTOM ========== */
+.toggler-icon {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.toggler-icon::before,
+.toggler-icon::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  transition: background-color 0.3s ease;
+}
+
+.toggler-icon::before {
+  top: -8px;
+}
+
+.toggler-icon::after {
+  bottom: -8px;
+}
+
+#mainNavbar.nav-scrolled .toggler-icon,
+#mainNavbar.nav-scrolled .toggler-icon::before,
+#mainNavbar.nav-scrolled .toggler-icon::after {
+  background-color: #fff;
+}
+
+
+/* ========== CAROUSEL STYLING ========== */
+.carousel-item {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+}
+
+.carousel-caption h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+
+.carousel-caption .btn {
+  margin-top: 20px;
+}
+
+
+/* ========== TABS ========== */
+.nav-tabs .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+.nav-tabs .nav-link.active {
+  color: #0d6efd;
+  border-color: #0d6efd #0d6efd #fff;
+}
+
+
+/* ========== PROJECTS SECTION ========== */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+/* ========== BUTTON HOVER ========== */
+.btn-outline-primary:hover {
+  color: white;
+  background-color: #0d6efd;
+}
+
+.user-sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: #f9f9f9;
+  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
+  transition: right 0.3s ease;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.user-sidebar.open {
+  right: 0;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar-btn {
+  padding: 10px 15px;
+  font-weight: 500;
+  background: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sidebar-btn:hover {
+  background: #0056b3;
+}
+
+.sidebar-btn.logout {
+  background-color: crimson;
+}
+
+.sidebar-btn.logout:hover {
+  background-color: darkred;
+}
+
+.contact-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+.contact-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  transition: all 0.5s ease-in-out;
+}
+.contact-left {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  position: relative;
+}
+.contact-left.expanded {
+  flex: 1 1 100%;
+  animation: expandLeft 0.6s ease forwards;
+}
+@keyframes expandLeft {
+  from { flex: 1; }
+  to { flex: 1 1 100%; }
+}
+.contact-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: opacity 0.4s ease;
+}
+.contact-left.expanded ~ .contact-right {
+  opacity: 0;
+  pointer-events: none;
+}
+.map-container iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 10px;
+}
+.quotes-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: italic;
+}
+.action-btn {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+.action-btn:hover {
+  background: #0056b3;
+}
